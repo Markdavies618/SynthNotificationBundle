@@ -9,11 +9,11 @@
  * @author Dom Udall <dom@synthmedia.co.uk>
  */
 
-namespace Synth\NotificationBundle\Entity;
+namespace Synth\NotificationBundle\Model;
 
 use DateTime;
 
-abstract class Notification
+abstract class Notification implements NotificationInterface
 {
     /**
      * @var integer $id
@@ -105,3 +105,4 @@ abstract class Notification
     {
         return $this->createdAt;
     }
+}

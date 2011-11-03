@@ -13,52 +13,29 @@ namespace Synth\NotificationBundle\Model;
 
 interface NotificationInterface
 {
-    /**
-     * Get id
-     *
-     * @return integer
-     */
     function getId();
 
-    /**
-     * Set message
-     *
-     * @param text $message
-     */
     function setMessage($message);
 
-    /**
-     * Get message
-     *
-     * @return text
-     */
     function getMessage();
 
-    /**
-     * Set read
-     *
-     * @param boolean $read
-     */
-    function setRead($read);
+    function isRead($read);
 
-    /**
-     * Get read
-     *
-     * @return boolean
-     */
     function getRead();
 
-    /**
-     * Set createdAt
-     *
-     * @param datetimetz $createdAt
-     */
     function setCreatedAt($createdAt);
 
-    /**
-     * Get createdAt
-     *
-     * @return datetimetz
-     */
     function getCreatedAt();
+
+    function setOwner($owner);
+
+    function getOwner();
+
+    function setFromUser($fromUser);
+
+    function getFromUser();
+
+    function setType($type);
+
+    function getType();
 }

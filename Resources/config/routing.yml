@@ -1,0 +1,3 @@
+SynthNotificationBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: SynthNotificationBundle:Default:index }

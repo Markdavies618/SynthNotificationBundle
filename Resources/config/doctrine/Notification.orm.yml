@@ -1,7 +1,6 @@
 Synth\NotificationBundle\Entity\Notification:
   type: entity
   table: null
-  repositoryClass: Synth\NotificationBundle\Entity\NotificationRepository
   fields:
     id:
       type: integer

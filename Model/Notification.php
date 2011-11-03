@@ -11,32 +11,29 @@
 
 namespace Synth\NotificationBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
+use DateTime;
 
-/**
- * Synth\NotificationBundle\Entity\Notification
- */
-class Notification
+abstract class Notification
 {
     /**
      * @var integer $id
      */
-    private $id;
+    protected $id;
 
     /**
      * @var text $message
      */
-    private $message;
+    protected $message;
 
     /**
      * @var boolean $read
      */
-    private $read;
+    protected $read;
 
     /**
-     * @var datetimetz $createdAt
+     * @var DateTime $createdAt
      */
-    private $createdAt;
+    protected $createdAt;
 
 
     /**
@@ -50,7 +47,7 @@ class Notification
     }
 
     /**
-     * Set message
+     * Set the notification message
      *
      * @param text $message
      */
@@ -60,7 +57,7 @@ class Notification
     }
 
     /**
-     * Get message
+     * Get the notification message
      *
      * @return text
      */
@@ -70,7 +67,7 @@ class Notification
     }
 
     /**
-     * Set read
+     * Set if the notification has been read by the owner
      *
      * @param boolean $read
      */
@@ -80,32 +77,31 @@ class Notification
     }
 
     /**
-     * Get read
+     * Returns if the notification has been read by the owner
      *
      * @return boolean
      */
-    public function getRead()
+    public function isRead()
     {
         return $this->read;
     }
 
     /**
-     * Set createdAt
+     * Set the date when the notification was created
      *
-     * @param datetimetz $createdAt
+     * @param DateTime $createdAt
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * Get createdAt
+     * Get the date when the notification was created
      *
-     * @return datetimetz
+     * @return DateTime
      */
     public function getCreatedAt()
     {
         return $this->createdAt;
     }
-}

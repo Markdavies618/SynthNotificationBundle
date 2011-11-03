@@ -5,6 +5,8 @@ present).
 
 Very much a work in progress! Feel free to fork and fix as you see fit =)
 
+PLEASE NOTE: There are a lot of bundle assumptions here, as it's mostly been tailored for a single use case.
+
 ## Installation
 
 Update your `deps` file, and add the following lines:
@@ -43,6 +45,18 @@ us a shout.
 
 Out of the box, the bundle assumes you're using the FOSUserBundle for your user authentication. If you're not, just make
 sure you implement the abstract Notification class in the Model directory.
+
+## Types
+
+These allow separation between notifications, giving developers the choice of displaying everything (a la Facebook), or
+individual notifications for a specific section.
+
+## Future Development
+
+Areas we'd like to work on and perfect, but aren't 'mission critical', if you will:
+
+* Multiple from users - being able to group notifications from more than one person (Joe, Mark and Chris liked your
+link)
 
 ## Credits
 
